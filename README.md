@@ -1,133 +1,140 @@
-<h1 align="center">🧠 Synapse – Smart Healthcare Assistant</h1> <p align="center"> A voice-enabled virtual assistant platform that revolutionizes healthcare access and efficiency through AI and automation. </p>
-📘 Project Abstract
-Synapse is an innovative healthcare platform designed to enhance patient engagement and streamline clinical workflows using the power of machine learning.
+# 🧠 SYNAPSE – Smart Healthcare Assistant
 
-At its core is an intelligent, on-call virtual assistant that:
+<p align="center">
+An AI-powered virtual healthcare assistant platform to streamline patient-doctor interactions,<br>
+analyze medical reports, and automate appointment scheduling.<br><br>
+💻 Built with React.js, FastAPI, and cutting-edge ML technologies.
+</p>
 
-Analyzes patient-reported symptoms
+---
 
-Provides preliminary medical advice
+## 🚀 About the Project
 
-Automatically schedules appointments with doctors
+**Synapse** is an intelligent healthcare web application designed to improve patient care and reduce clinical overhead using AI.
 
-This reduces the administrative burden on staff while ensuring timely, efficient healthcare access.
+The platform features a virtual assistant that:
+- Understands patient symptoms via voice/text
+- Provides AI-generated preliminary advice
+- Automatically schedules doctor appointments
 
-🌟 Core Features
-👥 Role-Based Access
-Patients: Book appointments, upload medical reports, and interact with the virtual assistant.
+Doctors get a full view of:
+- Appointments
+- Uploaded patient reports
+- AI-analyzed insights to aid diagnosis
 
-Doctors: View daily schedules, patient-submitted data, and AI-generated diagnostic insights.
+This personal hackathon project emphasizes accessibility, automation, and meaningful use of machine learning in real-world healthcare settings.
 
-🤖 Virtual Medical Assistant
-Text & voice-based interaction
+---
 
-Understands symptoms using NLP
+## ✅ Features (Already Implemented)
 
-Suggests next steps and books appointments
+- **User Roles:** Patients and Doctors, each with personalized dashboards
+- **Virtual Assistant:** AI-powered voice/text chat for health queries and bookings
+- **Medical Report Analysis:** Upload PDFs or images and get ML-driven summaries
+- **Smart Scheduling:** Patients can book time slots, doctors see live schedules
+- **Voice Intelligence:**
+  - **Speech-to-Text:** Powered by OpenAI Whisper
+  - **Text-to-Speech:** Using gTTS
+  - **Conversational AI:** Google Generative AI
+- **Twilio Integration:** Phone-based appointment confirmations
+- **Secure & Scalable Backend:** FastAPI + MongoDB
 
-📂 Medical Report Analysis
-Upload documents (PDFs, images, etc.)
+---
 
-ML models extract key insights
+## 🧰 Tech Stack
 
-Supports early diagnosis with AI-generated summaries
+### 🔹 Frontend
+- React.js  
+- Tailwind CSS  
+- Zustand (Global State)  
+- React Router  
+- SweetAlert2  
+- Axios  
 
-🗓️ Smart Appointment Scheduler
-Real-time calendar view
+### 🔸 Backend
+- FastAPI  
+- Uvicorn  
+- PyMongo + MongoEngine  
+- OpenAI Whisper  
+- gTTS  
+- Google Generative AI  
+- Twilio API  
+- WebSockets  
 
-Integrated with doctor availability
+---
 
-Powered by Twilio for automated phone call confirmations
+## 🛠️ Getting Started
 
-🧠 Voice Intelligence
-OpenAI Whisper: Converts patient speech to text
-
-gTTS: Converts AI text to speech
-
-Google Generative AI: Provides intelligent, human-like responses
-
-🛠️ Tech Stack
-🔹 Frontend
-React.js
-
-Tailwind CSS
-
-Zustand (State Management)
-
-SweetAlert2
-
-React Router
-
-Axios
-
-🔸 Backend
-FastAPI
-
-Uvicorn
-
-MongoDB (PyMongo + MongoEngine)
-
-WebSockets
-
-OpenAI Whisper
-
-gTTS (Google Text-to-Speech)
-
-Google Generative AI
-
-Twilio API
-
-📁 Folder Structure
-synapse/
-├── backend/ → FastAPI server
-│ ├── main.py
-│ ├── routers/
-│ └── utils/
-├── frontend/ → React app
-│ ├── src/
-│ │ ├── components/
-│ │ ├── pages/
-│ │ ├── assets/
-│ │ └── store/
-└── README.md
-
-🧑‍💻 Getting Started
-1. Clone the Repository
+```bash
 git clone https://github.com/your-username/synapse.git
 cd synapse
+```
 
-2. Backend Setup
+Open **two terminals** in separate tabs/windows:
+
+### 1️⃣ Backend Setup
+
+```bash
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
+```
 
-Make sure to configure your .env file with appropriate API keys and MongoDB URL.
+> Create a `.env` file in `backend/` and add:
+```
+MONGO_URL = your_mongo_connection_string
+OPENAI_API_KEY = your_openai_key
+GOOGLE_API_KEY = your_google_gen_ai_key
+TWILIO_SID = your_twilio_sid
+TWILIO_AUTH_TOKEN = your_twilio_token
+```
 
-3. Frontend Setup
+---
+
+### 2️⃣ Frontend Setup
+
+```bash
 cd frontend
 npm install
 npm run dev
+```
 
-Frontend runs at http://localhost:5173
+- Frontend: `http://localhost:5173`  
+- Backend API: `http://localhost:8000`
 
-Backend API runs at http://localhost:8000
+---
 
-🚀 Deployment
-Frontend: Vercel / Netlify
+## ⚠️ Notes
 
-Backend: Render / Railway / EC2
+- Whisper and gTTS require access to audio devices.
+- For Google Generative AI, enable the appropriate API in your GCP account.
+- Twilio credentials are optional unless you enable phone call confirmations.
 
-Database: MongoDB Atlas
+---
 
-🎯 Goals
-Synapse strives to:
+## 💡 Future Enhancements
 
-Improve accessibility to primary healthcare
+- Real-time chat between doctors and patients  
+- Patient history timeline and download feature  
+- ML model fine-tuning on localized datasets  
+- Role-based authorization using JWT  
 
-Reduce administrative overload in hospitals
+---
 
-Use AI responsibly to support, not replace, medical professionals
+## 📦 Deployment Info
 
-🙌 Final Note
-If you found this project interesting, feel free to give it a ⭐ and share your feedback.
-Together, let's build smarter, more compassionate healthcare. 💙
+- **Frontend:** Deploy on Vercel or Netlify  
+- **Backend:** Render / Railway / EC2  
+- **Database:** MongoDB Atlas  
+
+---
+
+## 🙌 Special Note
+
+This is a **personal project** built for a hackathon. Contributions are not open at the moment, but the tech and vision behind it aim to bridge gaps in modern healthcare access.  
+
+If you're working on something similar or want to collaborate — feel free to reach out!
+
+---
+
+Let me know if you want a contribution guide or demo link section added!
