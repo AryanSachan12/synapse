@@ -1,4 +1,4 @@
-# 🧠 SYNAPSE – Smart Healthcare Assistant
+<h1 align="center">🧠 SYNAPSE – Smart Healthcare Assistant</h1>
 
 <p align="center">
 An AI-powered virtual healthcare assistant platform to streamline patient-doctor interactions,<br>
